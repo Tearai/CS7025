@@ -1,0 +1,19 @@
+{
+    "images": [
+      {
+        "id": 1,
+        "filename": "photo/bibi1.JPG",
+        "description": "A beautiful sunrise over the mountains."
+      },
+      {
+        "id": 2,
+        "filename": "photo/bibi2.JPG",
+        "description": "A serene beach with crystal clear water."
+      },
+      {
+        "id": 3,
+        "filename": "photo/bibi3.JPG",
+        "description": "A playful puppy running in the park."
+      }
+    ]
+  }

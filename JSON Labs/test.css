@@ -1,0 +1,19 @@
+.header{
+    text-align: center;
+}
+
+.wrapper{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+#randombibi {
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Fade transition */
+}

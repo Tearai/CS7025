@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <script src="JS/data.js"></script>
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="portfliostyle.css">
+    <script src="JS/pagetrans.js"></script>
+    <script src="JS/carousel.js"></script>
+</head>
+<body>
+    <!--Code for making the header-->
+    <div class="header-container">
+        <div class="name">
+            <p>Chan Ming Hei</p>
+        </div>
+
+        <nav>
+            <a href="homepage.html" class="active">Home</a>
+            <a href="personal/personalprojects.html">Personal Projects</a>
+            <a href="university/universityprojects.html">University Projects</a>
+            <a href="webgames/webgames.html">Webpage Games</a>
+            <a href="contact/contact.html">Contact</a>
+        </nav>
+    </div>
+
+<!--Code for making Title Section-->
+    <div class="pagetitle"> 
+        <h1>⠀⠀My Portfolio⠀⠀</h1>
+    </div>
+
+    <!--Code for making the About me section-->
+    <div class="about">
+        <h2>About Me</h2>
+        <p>Hi I am Chan Ming Hei but you can also call me Aaron. I am a current MSc student from Trinity and a graduate from game design. I have experience using <b>Unreal Engine 5</b> and <b>Unity</b>.</p><br>
+    </div>
+
+    <div class="line"></div> 
+
+    <!--Code for making the latest game section-->
+    <div class="projectheader">
+        <br>
+        <h2>Current Projects</h2>
+        <div class="currentprojects">
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="Images/beatshooter3.gif" alt="Beat Shooter">
+                    <img src="Images/beatshooter2.png" alt="Education Game">
+                    <img class="gif1" src="Images/game1.png" alt="Horror Game">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <h3>Beat Shooter</h3>
+            <p>This is a rhythm project I've been working on. The idea is to mix aim labs with beat saber elements together.</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="allprojects">
+        <h2>Lists of Projects</h2>
+
+        <table class="styled-table">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Link</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

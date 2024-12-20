@@ -1,0 +1,785 @@
+﻿/*making all pages have the same font and making sure it fits the whole page*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*header css for all pages*/
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    padding: 0 20px;
+    position: fixed;  /* This makes the navbar fixed at the top */
+    top: 0;           /* Ensures it stays at the top of the screen */
+    left: 0;          /* Aligns it to the left side of the screen */
+    width: 100%;      /* Makes the navbar span the full width of the screen */
+    z-index: 1000;    /* Ensures it stays above other content */
+    transition: background-color 0.3s ease;  /* Add transition for background color */
+}
+
+.header-container.scrolled {
+    background-color: #646464;  /* Change to white when scrolled */
+}
+
+
+.name{
+    /*setting the name size, color and style*/
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;  /* Move the nav items 10px to the left */
+}
+
+nav a {
+    /*Setting the text color and style*/
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    /*When mouse is hover the color changes*/
+    background-color: #575757; 
+}
+
+/*Homepage css*/
+
+.pagetitle{
+    /*Setting the space and style for the title*/
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 100px;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    text-decoration-color: rgb(255, 67, 67);
+    text-underline-offset: 10px;
+    background-color: rgba(26, 26, 26, 0.774);
+    color:white;
+    padding-bottom: 120px;
+}
+
+.pagetitle h1{
+    transform: scaleY(1.25);
+}
+
+
+.about{
+    /*Setting the space for the about me title*/
+    padding: 80px;
+    text-align: center;
+}
+.about h2{
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.about p {
+    /*Setting the space for the about me description and making a max width so the text won't be the whole page long*/
+    line-height: 1.5;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.projectheader{
+    /*Centering the text*/
+    text-align: center;
+}
+
+.projectheader h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.currentprojects{
+    /*creating the grid so I can put the stuff inside the class later*/
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    padding-bottom:70px;
+}
+
+.currentprojects h3{
+    /*Setting where the game name is placed in the grid*/
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    margin-top: 110px;
+    
+}
+
+.currentprojects p {
+    /*Setting where the game description is placed in the grid*/
+    grid-column:  3 / 4;
+    grid-row: 2 / 3;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+.imagewrapper {
+    display: flex;
+    margin-left: -800px;
+    margin-top: -250px;
+    padding: 100px;
+}    
+
+/* Carousel styles */
+.carousel-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2 ;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    min-height: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+.carousel-container:hover .prev,
+.carousel-container:hover .next {
+  opacity: 1;
+}
+  
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0;  /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .carousel-container button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 8px; 
+    width: 8px;  
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+/*Lists of Projects*/
+.allprojects{
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.allprojects h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+/*Line break CSS*/
+
+.line{
+    /*Setting how long the line will be and color and the space it occupies*/
+    border-bottom-style:outset;
+    border-bottom-color: #FE2828;
+    border-bottom-width: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 95%;
+    
+}
+
+/*Contact css*/
+
+.myinfo{
+    /*Centering the text and making it spaced apart*/
+    text-align: center;
+    line-height: 1.5;
+}
+
+.myinfo ul{
+    /*Making it indent to the left and give it a space*/
+    padding-top: 50px;  
+    display: inline-block;
+    text-align: left;
+}
+
+.contactme {
+    margin: 20px auto;
+    margin-top: 100px;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactme h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    flex: 1 1 30%;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input#Subject {
+    flex: 1 1 90%;
+    min-width: 90%;
+}
+
+form textarea {
+    flex: 2 1 60%;
+    height: 80px;
+    resize: none;
+}
+
+form button {
+    flex: 1 1 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+
+
+/*CSS for the layout of the personal project and university project*/
+
+.gamelist {
+      /* Make all the info center and give it space */
+      text-align: center;
+      margin: 30px;
+      padding-top: 50px;
+  
+      /* Creating the grid so I can put the stuff inside the class later */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);  /* Three equal columns */
+      grid-template-rows: repeat(2, 500px);  /* Two rows of smaller height (300px) */
+      gap: 20px;  /* Add spacing between grid items */
+}
+
+/*Uni games*/
+.ordeals {
+    grid-column: 1 / 2; /* Place it in the first column */
+    grid-row: 1 / 2; /* Place it in the first row */
+    
+}
+
+.education {
+    grid-column: 2 / 3; /* Place it in the second column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.ordeals, .education {
+    width: 90%; /* Make each item 90% of its container width */
+    height: 90%; /* Make each item 90% of its container height */
+    margin: 0 auto;  /* Center each item inside the grid cell */
+}
+
+.ordeals img, .education img {
+    max-width: 100%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 5%;
+}
+
+/*Personal games*/
+
+.horror{
+    grid-column: 1 / 2; /* Place it in the first column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.beatshooter{
+    grid-column: 2 / 3; /* Place it in the second column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.obby{
+    grid-column: 3 / 3; /* Place it in the second column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.horror img, .obby img, .beatshooter img{
+    max-width: 100%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 5%;
+}
+
+
+
+/*Web games*/
+
+.cookie{
+    grid-column: 1 / 2; /* Place it in the first column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.cookie img{
+    max-width: 70%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+.pokemon{
+    grid-column: 2 / 3; /* Place it in the first column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.pokemon img{
+    max-width: 55%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+.jump{
+    grid-column: 3 / 3; /* Place it in the first column */
+    grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.jump img{
+    max-width: 55%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+.game-container #pokemon-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  .game-container {
+    position: relative; /* Make the parent container a reference for absolute positioning */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+  
+.game-container input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+  
+  .game-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .game-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .game-container p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .game-container #pokemon-guess {
+    position: relative;  /* Ensure this element is the reference point for absolute positioning */
+}
+
+.game-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 10%;           /* Set the width to 10% */
+    position: absolute;
+    top: 100%;            /* Position it just below the #pokemon-guess element */
+    left: 50%;            /* Move the element to the center */
+    transform: translateX(-50%); /* Adjust it to be exactly centered */
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;        /* Initially hidden, show when needed */
+}
+
+.game-container ul li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.game-container ul li:hover {
+    background-color: #ddd;
+}
+
+/*CSS for the layout of the game pages*/
+
+.gameinfo {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Arrange the image container and text side by side */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    gap: 20px; /* Space between the image container and the text */
+    margin: 20px auto; /* Center horizontally on the page */
+    max-width: 80%; /* Limit the section's width */
+    padding-top: 50px;
+}
+
+.gameinfo img{
+    max-width: 40%; /* Increase this value to make the image larger */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    padding-left: 200px;
+    padding-right: 20px;
+}
+
+/* Style for the image container */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack iframe and image vertically */
+    align-items: center; /* Center align items */
+    gap: 10px; /* Space between iframe and image */
+    max-width: 100%; /* Ensure it doesn’t exceed the available space */
+    margin-right: -250px; /* Add space to the right of the image */
+    margin-left: -200px;
+}
+
+/* Style for the iframe */
+.image-container iframe {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a max width */
+    height: 400px; /* Set an appropriate height */
+    padding-left: 180px;
+}
+
+/* Style for the image */
+.image-container img {
+    max-width: 40%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Style for the game description text */
+.gameinfo-text {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    flex: 1; /* Allow the container to grow if needed */
+    max-width: 700px; /* Limit the width of the text */
+}
+
+/* Style for paragraphs */
+.gameinfo-text p {
+    margin: 10px 0; /* Add space between paragraphs */
+    line-height: 1.5; /* Improve readability */
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Text color */
+}
+
+/* Style for the unordered list */
+.gameinfo-text ul {
+    margin: 15px 0; /* Add space above and below the list */
+    padding-left: 20px; /* Indent the list */
+    list-style-type: disc; /* Ensure bullet points are visible */
+}
+
+/* Style for list items */
+.gameinfo-text ul li {
+    margin-bottom: 10px; /* Add space between each list item */
+    line-height: 1.5; /* Improve readability within each item */
+}
+
+/* Style for the image container */
+.imageclick {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    margin-right: -450px; /* Add space to the right of the image */
+ 
+}
+
+/* Style for the image */
+.imageclick a img {
+    max-width: 55%; /* Increase this value to make the image larger */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Flappy Bird Game Container */
+.game-container2 {
+    text-align: center;
+    margin: 80px;
+}
+
+.game-container2 #flappyBirdCanvas {
+    border: 2px solid #000;
+    background-color: #70c5ce; /* Sky blue background */
+    display: block;
+    margin: 0 auto;
+}
+
+.game-container2 #game-over {
+    margin-top: 20px;
+}
+
+.game-container2 #game-over p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.game-container2 #game-over button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-container2 #game-over button:hover {
+    background-color: #45a049;
+}
+
+
+/*Clicking game CSS*/
+
+.clicking {
+    text-align: center;
+    margin-top: 130px;
+}
+
+/* Remove default button styles */
+.clicking button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    display: inline-block; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Optional: You can also style the image inside the button */
+.clicking button img {
+    width: 300px; /* Adjust size of the image */
+    height: auto;
+}
+
+/* Define the rotate effect classes */
+.rotate {
+    transform: rotate(-10deg); /* Rotate slightly to the left */
+}
+
+.rotate-back {
+    transform: rotate(10deg); /* Rotate slightly to the right */
+}
+
+#reseticon{
+    padding-top: 30px;
+    width: 70px; /* Adjust size of the image */
+    height: auto;
+}
+
+#clicked {
+    font-family: 'Baloo', sans-serif; /* A playful font */
+    font-size: 50px;
+    color: #FFD700; /* Bright yellow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    font-weight: bold; /* Make the text bold for emphasis */
+    margin: 40px;
+}
+
+/* Confetti CSS */
+
+#confetti {
+    left: 0;
+    position: fixed;
+    right: 0; 
+    top: -160px;
+    z-index: 10000;
+   }
+    
+   #confetti .ball {
+    animation-iteration-count :infinite !important;
+    -webkit-animation-iteration-count :infinite !important;
+    border-radius: 50%;
+    cursor: default;
+    display: inline-block;
+    height: 10px;
+    user-select: none; 
+    -webkit-user-select: none; 
+    width: 10px;
+   } 
+    
+   @-webkit-keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   @keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   #confetti .ball:nth-child(2n) {
+    -webkit-animation: falling-left linear;
+    animation: falling-left linear ;
+   }
+    
+   @-webkit-keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 0;}
+    10% { opacity: 1;}
+    20% { opacity: 0;}
+    30% { opacity: 1;}
+    40% { opacity: 0;}
+    50% { opacity: 1;}
+    60% { opacity: 0;}
+    70% { opacity: 1;}
+    80% { opacity: 0;}
+    90% { opacity: 1;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;}
+   }
+    
+   @keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;} 
+   }
+    
+   #confetti .ball:nth-of-type(2n+1) {
+    -webkit-animation: falling-right linear ;
+    animation: falling-right linear;
+   }
+
+   .fade-out {
+    animation: fadeOut 1s forwards; /* Apply the fade-out effect over 1 second */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

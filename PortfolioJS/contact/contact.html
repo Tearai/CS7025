@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../portfliostyle.css">
+
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "U9UpBby4PW8roEtxn",
+     });
+    })();
+    </script>
+
+<script src="../JS/sendemail.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <!--Code for making the header-->
+    <div class="header-container">
+        <div class="name">
+            <p>Chan Ming Hei</p>
+        </div>
+
+        <nav>
+            <a href="../homepage.html" class="active">Home</a>
+            <a href="../personal/personalprojects.html">Personal Projects</a>
+            <a href="../university/universityprojects.html">University Projects</a>
+            <a href="../webgames/webgames.html">Webpage Games</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    
+    <!--Code for making Title Section-->
+    <div class="pagetitle">
+        <h1>⠀⠀My Contacts⠀⠀</h1>
+    </div>
+
+    <!--Code for making the my infro section-->
+    <div class="myinfo">
+        <ul>
+            <li>Email: <a href="mailto:mingheichan90@gmail.com">mingheichan90@gmail.com</a></li>
+            <li>Linkedin: <a href="https://www.linkedin.com/in/ming-hei-chan-16736a27a/"> Chan Ming Hei (Linkedin Page)</a></li>
+            <li>CV:  <a href="https://docs.google.com/document/d/1y7h9zLwNRFXICvO2iY_CsiuZRmXm1SS2me9dEx41EEQ/edit?tab=t.0"> Chan Ming Hei (CV) </a></li>
+        </ul>
+    </div>
+
+    <div class="line"></div> 
+
+    <div class="contactme">
+        <h2>Contact Me</h2>
+        <form onsubmit="emailSend(event)">
+            <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
+            <input type="text" id="Name" name="Name" placeholder="Full Name" required>
+            <input type="email" id="Email" name="Email" placeholder="Email" required>
+            <textarea name="Message" id="Message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>        
+    </div>
+
+</body>
+</html>

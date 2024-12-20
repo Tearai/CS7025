@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>PokemonQuiz</title>
+    <link rel="stylesheet" type="text/css" href="../portfliostyle.css">
+    <script src="../JS/pagetrans.js"></script>
+    
+</head>
+<body>
+    <!-- Code for making the header -->
+    <div class="header-container">
+        <div class="name">
+            <p>Chan Ming Hei</p>
+        </div>
+
+        <nav>
+            <a href="../homepage.html" class="active">Home</a>
+            <a href="../personal/personalprojects.html">Personal Projects</a>
+            <a href="../university/universityprojects.html">University Projects</a>
+            <a href="webgames.html">Webpage Games</a>
+            <a href="../contact/contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Code for making Title Section -->
+    <div class="pagetitle">
+        <h1>What's this Pokemon</h1>
+    </div>
+
+    <div class="game-container">
+        <h1>Guess the Pokémon!</h1>
+        <div id="pokemon-image-container">
+          <img id="pokemon-image" src="" alt="Pokémon Image">
+        </div>
+        <input type="text" id="pokemon-guess" placeholder="Enter Pokémon name" autocomplete="off">
+        <ul id="suggestions-list"></ul>
+        <button id="submit-button">Submit Guess</button>
+        <p id="feedback"></p>
+        <p id="score">Score: 0</p>
+      </div>
+      <script src="../JS/pokedata.js"></script>
+
+</body>
+</html>
